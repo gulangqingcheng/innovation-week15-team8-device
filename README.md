@@ -5,16 +5,15 @@
 | 角色   | 姓名  | 任务                                      | PR 链接  |
 | ---- | --- | --------------------------------------- | ------ |
 | 组长   | 蔡欣宜 | 创建原始仓库、维护 main、审核 PR、组织真机运行与证据提交        | <br /> |
-| 组员 A | 刘欣雨 | 修改 groupName、projectTitle、projectSlogan | <br /> |
-| 组员 B | 石文芝 | 补全 members 中的成员姓名与分工                    | <br /> |
-| 组员 C | 孙晨恩 | 补充 realDeviceChecks 中的真机运行检查项           | <br /> |
-| 组员 D | 高建洋 | 补充 evidenceRules，并把真机照片加入 README        | <br /> |
-
+| 组员 A | 刘欣雨 | 修改 groupName、projectTitle、projectSlogan | [PR #2](https://github.com/gulangqingcheng/innovation-week15-team8-device/pull/2) |
+| 组员 B | 石文芝 | 补全 members 中的成员姓名与分工                    | [PR #3](https://github.com/gulangqingcheng/innovation-week15-team8-device/pull/3) |
+| 组员 C | 孙晨恩 | 补充 realDeviceChecks 中的真机运行检查项           | [PR #4](https://github.com/gulangqingcheng/innovation-week15-team8-device/pull/4) |
+| 组员 D | 高建洋 | 补充 evidenceRules，并把真机照片加入 README        | 待提交 |
 ## Android 真机运行
 
 - 手机型号：Mi 10
 - 运行方式：flutter run
-- 运行日期：2026-06-12 1:43pm
+- 运行日期：2026-06-12 2:42pm
 
 ![Android 真机运行照片](images/android-real-device.jpg)
 
