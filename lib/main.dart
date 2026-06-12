@@ -13,7 +13,7 @@ class InnovationTeamDeviceApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: '创新实验团队真机验收',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
         useMaterial3: true,
       ),
       home: const TeamDeviceHomePage(),
@@ -24,24 +24,27 @@ class InnovationTeamDeviceApp extends StatelessWidget {
 class TeamDeviceHomePage extends StatelessWidget {
   const TeamDeviceHomePage({super.key});
 
-  static const String groupName = '第8组 创新实验队';
+  static const String groupName = '第8组 创新实验团队';
   static const String projectTitle = '第8组 Flutter Android 真机验收看板';
-  static const String projectSlogan = '团队协作，Fork 分支，PR 合并，真机运行，第8组一起把代码跑在手机上';
+  static const String projectSlogan = '用 GitHub 协作，把第14周个人 Hello World 升级成小组真机运行成果';
 
   static const List<TeamMember> members = [
-    TeamMember(role: '组长', name: '蔡欣宜', task: '负责原始仓库、合并PR、组织验收'),
-    TeamMember(role: '组员 A', name: '刘欣雨', task: '修改应用标题、口号和小组名'),
-    TeamMember(role: '组员 B', name: '石文芝', task: '补全成员信息与分工'),
-    TeamMember(role: '组员 C', name: '孙晨恩', task: '补充Android真机检查项'),
-    TeamMember(role: '组员 D', name: '高建阳', task: '补充证据规则、README照片说明'),
+    TeamMember(role: '组长', name: '蔡欣宜', task: '创建原始仓库、维护 main、审核 PR、组织真机运行与证据提交'),
+    TeamMember(role: '组员 A', name: '刘欣雨', task: '修改 groupName、projectTitle、projectSlogan'),
+    TeamMember(role: '组员 B', name: '石文芝', task: '补全 members 中的成员姓名与分工'),
+    TeamMember(role: '组员 C', name: '孙晨恩', task: '补充 realDeviceChecks 中的真机运行检查项'),
+    TeamMember(role: '组员 D', name: '高建洋', task: '补充 evidenceRules，并把真机照片加入 README'),
   ];
 
   static const List<String> realDeviceChecks = [
     '主电脑能执行 flutter doctor，并识别 Android toolchain',
     'Android 手机已打开开发者选项和 USB 调试',
+    '手机已解锁并在弹出的对话框中授权 USB 调试',
+    'USB 连接模式设置为文件传输',
     'adb devices 显示设备状态为 device，而不是 unauthorized',
     'flutter devices 能看到真实 Android 设备',
     'flutter run 后手机屏幕显示本小组修改后的页面',
+    '应用能正常启动并支持热重载功能',
   ];
 
   static const List<String> evidenceRules = [
@@ -80,13 +83,13 @@ class HeroSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.indigo.shade50,
+      color: Colors.red.shade50,
       child: const Padding(
         padding: EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(Icons.phone_android, size: 44, color: Colors.indigo),
+            Icon(Icons.phone_android, size: 44, color: Colors.red),
             SizedBox(height: 12),
             Text(TeamDeviceHomePage.groupName, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
             SizedBox(height: 8),
