@@ -87,7 +87,7 @@ device
 
 ## 真机照片要求
 
-请把照片放到：
+请把本组 Android 真机运行照片放到：
 
 ```text
 images/android-real-device.jpg
@@ -106,13 +106,38 @@ images/android-real-device.jpg
 - 不能是 Android 模拟器截图；
 - 不能用手机本机截图代替；
 - 必须由第二部手机拍摄；
-- 照片中能看到手持手机；
-- 不包含聊天记录、手机号、定位等隐私信息。
+- 照片中能看到手持真实 Android 手机；
+- 手机屏幕中能看到第8组 Flutter App 运行页面；
+- 不包含聊天记录、手机号、定位、身份证等隐私信息。
 
 ## 本组真机运行照片
+
+### 照片文件说明
+
+- 照片文件名：`android-real-device.jpg`
+- 照片保存目录：`images/`
+- README 引用路径：`images/android-real-device.jpg`
+- 拍摄方式：使用第二部手机拍摄，不能使用本机截图代替
+- 隐私检查：提交前确认照片中没有聊天记录、手机号、定位、身份证等隐私信息
+
+### 真机运行信息
+
+- 运行设备型号：待真机运行后补充
+- 运行方式：`flutter run`
+- 运行日期：待真机运行后补充
+- 拍摄设备：第二部手机
+- 照片路径：`images/android-real-device.jpg`
+
+### 真机照片展示
 
 提交照片后，下面应显示本组运行效果：
 
 ![Android 真机运行照片](images/android-real-device.jpg)
 
-如果图片暂时无法显示，请检查 `images/android-real-device.jpg` 是否已提交，以及文件名大小写是否一致。
+如果图片暂时无法显示，请检查：
+
+1. 是否已经把照片放入 `images/` 目录；
+2. 文件名是否为 `android-real-device.jpg`；
+3. README 中的路径是否为 `images/android-real-device.jpg`；
+4. 文件名大小写是否完全一致；
+5. 图片是否已经提交并 push 到 GitHub。

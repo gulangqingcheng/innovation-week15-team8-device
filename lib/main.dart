@@ -29,11 +29,27 @@ class TeamDeviceHomePage extends StatelessWidget {
   static const String projectSlogan = '团队协作，Fork 分支，PR 合并，真机运行，第8组一起把代码跑在手机上';
 
   static const List<TeamMember> members = [
-    TeamMember(role: '组长', name: '请填写组长姓名', task: '创建原始仓库、维护 main、审核 PR、组织真机运行与证据提交'),
-    TeamMember(role: '组员 A', name: '请填写姓名', task: '修改 groupName、projectTitle、projectSlogan'),
+    TeamMember(
+      role: '组长',
+      name: '请填写组长姓名',
+      task: '创建原始仓库、维护 main、审核 PR、组织真机运行与证据提交',
+    ),
+    TeamMember(
+      role: '组员 A',
+      name: '请填写姓名',
+      task: '修改 groupName、projectTitle、projectSlogan',
+    ),
     TeamMember(role: '组员 B', name: '请填写姓名', task: '补全 members 中的成员姓名与分工'),
-    TeamMember(role: '组员 C', name: '请填写姓名', task: '补充 realDeviceChecks 中的真机运行检查项'),
-    TeamMember(role: '组员 D', name: '请填写姓名', task: '补充 evidenceRules，并把真机照片加入 README'),
+    TeamMember(
+      role: '组员 C',
+      name: '请填写姓名',
+      task: '补充 realDeviceChecks 中的真机运行检查项',
+    ),
+    TeamMember(
+      role: '组员 D',
+      name: '请填写姓名',
+      task: '补充 evidenceRules，并把真机照片加入 README',
+    ),
   ];
 
   static const List<String> realDeviceChecks = [
@@ -45,10 +61,11 @@ class TeamDeviceHomePage extends StatelessWidget {
   ];
 
   static const List<String> evidenceRules = [
-    '证据照片必须由第二部手机拍摄，不能用本机截图代替',
-    '照片中要看到手持真实 Android 手机和本应用页面',
-    'README 中要包含 GitHub 协作说明、PR 合并记录和真机照片',
-    '提交前检查照片不包含私人聊天、手机号、定位等隐私信息',
+    '证据照片必须由第二部手机拍摄，不能用本机截图、浏览器截图或模拟器截图代替',
+    '照片中要同时看到手持真实 Android 手机和第8组 Flutter App 运行页面',
+    '真机照片统一保存到 images/android-real-device.jpg，并在 README 中引用显示',
+    'README 中要写清楚运行设备、运行方式、拍摄方式、照片路径和 PR 合并记录',
+    '提交前检查照片不包含聊天记录、手机号、定位、身份证等隐私信息',
   ];
 
   @override
@@ -88,11 +105,20 @@ class HeroSection extends StatelessWidget {
           children: [
             Icon(Icons.phone_android, size: 44, color: Colors.indigo),
             SizedBox(height: 12),
-            Text(TeamDeviceHomePage.groupName, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
+            Text(
+              TeamDeviceHomePage.groupName,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+            ),
             SizedBox(height: 8),
-            Text(TeamDeviceHomePage.projectTitle, style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold)),
+            Text(
+              TeamDeviceHomePage.projectTitle,
+              style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+            ),
             SizedBox(height: 8),
-            Text(TeamDeviceHomePage.projectSlogan, style: TextStyle(fontSize: 16)),
+            Text(
+              TeamDeviceHomePage.projectSlogan,
+              style: TextStyle(fontSize: 16),
+            ),
           ],
         ),
       ),
@@ -108,9 +134,14 @@ class MembersSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text('小组成员与 PR 分工', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+        const Text(
+          '小组成员与 PR 分工',
+          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        ),
         const SizedBox(height: 12),
-        ...TeamDeviceHomePage.members.map((member) => MemberCard(member: member)),
+        ...TeamDeviceHomePage.members.map(
+          (member) => MemberCard(member: member),
+        ),
       ],
     );
   }
@@ -144,12 +175,17 @@ class RealDeviceChecksSection extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Android 真机运行检查项', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+            const Text(
+              'Android 真机运行检查项',
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
             const SizedBox(height: 8),
-            ...TeamDeviceHomePage.realDeviceChecks.map((item) => Padding(
-                  padding: const EdgeInsets.only(bottom: 6),
-                  child: Text('• $item'),
-                )),
+            ...TeamDeviceHomePage.realDeviceChecks.map(
+              (item) => Padding(
+                padding: const EdgeInsets.only(bottom: 6),
+                child: Text('• $item'),
+              ),
+            ),
           ],
         ),
       ),
@@ -169,12 +205,17 @@ class EvidenceRulesSection extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('最终证据要求', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+            const Text(
+              '最终证据要求',
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
             const SizedBox(height: 8),
-            ...TeamDeviceHomePage.evidenceRules.map((rule) => Padding(
-                  padding: const EdgeInsets.only(bottom: 6),
-                  child: Text('• $rule'),
-                )),
+            ...TeamDeviceHomePage.evidenceRules.map(
+              (rule) => Padding(
+                padding: const EdgeInsets.only(bottom: 6),
+                child: Text('• $rule'),
+              ),
+            ),
           ],
         ),
       ),
@@ -183,7 +224,11 @@ class EvidenceRulesSection extends StatelessWidget {
 }
 
 class TeamMember {
-  const TeamMember({required this.role, required this.name, required this.task});
+  const TeamMember({
+    required this.role,
+    required this.name,
+    required this.task,
+  });
 
   final String role;
   final String name;
